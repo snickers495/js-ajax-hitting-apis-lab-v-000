@@ -6,3 +6,4 @@ function getRepositories(){
   req.open("GET", url)
   req.send()
 }
+function showRepositories
