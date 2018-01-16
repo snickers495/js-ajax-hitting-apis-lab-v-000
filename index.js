@@ -13,6 +13,7 @@ function showRepositories(event, data) {
   document.getElementById("repositories").innerHTML = repoList
 }
 function getCommits(el){
+  const data = el.dataset;
   const name = el.dataset.repo
   const req = new XMLHttpRequest()
   req.addEventListener("load", displayCommits)
