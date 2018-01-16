@@ -34,7 +34,7 @@ function getBranches(el){
   const url = 'https://api.github.com/repos/' + username + '/' + name + '/branches'
   const req = new XMLHttpRequest()
   req.addEventListener("load", displayBranches)
-  req.open("GET", )
+  req.open("GET", url)
   req.send()
 }
 function displayBranches(){
