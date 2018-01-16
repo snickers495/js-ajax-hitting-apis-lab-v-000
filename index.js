@@ -22,3 +22,6 @@ function getCommits(el){
   req.open("GET", )
   req.send()
 }
+function displayCommits(){
+  
+}
