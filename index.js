@@ -27,8 +27,15 @@ function displayCommits() {
   const commitsList = `<ul>${commits.map(commit => '<li><strong>' + commit.author.login + '</strong> - ' + commit.commit.author.name + " - " + commit.commit.message + '</li>').join('')}</ul>`;
   document.getElementById("details").innerHTML = commitsList;
 }
-function getBranches(){
-
+function getBranches(el){
+  const data = el.dataset;
+  const name = data.repository;
+  const username = data.username;
+  const url = 'https://api.github.com/repos/' + username + '/' + name + '/commits'
+  const req = new XMLHttpRequest()
+  req.addEventListener("load", displayCommits)
+  req.open("GET", )
+  req.send()
 }
 function displayBranches(){
 
