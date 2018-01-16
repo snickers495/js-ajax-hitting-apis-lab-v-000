@@ -38,5 +38,7 @@ function getBranches(el){
   req.send()
 }
 function displayBranches(){
-
+  const branches = JSON.parse(this.responseText);
+  const branchList = `<ul>${branches.map(branch => '<li><strong>' + branch.author.login + '</strong> - ' + branch.branch.author.name + " - " + branch.branch.message + '</li>').join('')}</ul>`;
+  document.getElementById("details").innerHTML = commitsList;
 }
